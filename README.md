@@ -19,4 +19,5 @@
 
 ### Erstellen einer Komponente
 --> Definieren einer Komponente
+---> Eine Komponente darf nur ein Root-Element haben
 --> Einbinden von Komponenten
