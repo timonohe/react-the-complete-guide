@@ -12,3 +12,7 @@
 ----> ReactDOM.createRoot(...)<br/>
 ---> app.tsx<br/>
 ----> Definiert die App-Komponente<br/>
+
+-> JSX<br/>
+--> JavaScript XML<br/>
+--> Syntax zum Definieren der Komponenten
