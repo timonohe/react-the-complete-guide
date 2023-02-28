@@ -1,0 +1,90 @@
+{
+  "name": "react-complete-guide",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/react-complete-guide/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-complete-guide",
+        "index": "apps/react-complete-guide/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-complete-guide/src/main.tsx",
+        "tsConfig": "apps/react-complete-guide/tsconfig.app.json",
+        "assets": [
+          "apps/react-complete-guide/src/favicon.ico",
+          "apps/react-complete-guide/src/assets"
+        ],
+        "styles": ["apps/react-complete-guide/src/styles.scss"],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/react-complete-guide/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-complete-guide/src/environments/environment.ts",
+              "with": "apps/react-complete-guide/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "react-complete-guide:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "react-complete-guide:build:development"
+        },
+        "production": {
+          "buildTarget": "react-complete-guide:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-complete-guide/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/react-complete-guide/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
