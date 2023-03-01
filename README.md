@@ -21,3 +21,7 @@
 --> Definieren einer Komponente
 ---> Eine Komponente darf nur ein Root-Element haben
 --> Einbinden von Komponenten
+
+### Stylen einer Komponente
+--> Import der (S)CSS Datei in der tsx-Datei
+--> Klassen an HTML-Elementen mit "className" definieren anstelle von "class"
