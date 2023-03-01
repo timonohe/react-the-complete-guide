@@ -1,4 +1,5 @@
 import ExpenseItem from "./components/expense-item";
+import './app.scss';
 
 function App() {
   return (

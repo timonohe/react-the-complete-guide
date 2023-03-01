@@ -25,3 +25,6 @@
 ### Stylen einer Komponente
 --> Import der (S)CSS Datei in der tsx-Datei
 --> Klassen an HTML-Elementen mit "className" definieren anstelle von "class"
+
+### Dynamischen Content anzeigen
+--> Variablen/Konstanten können dynamisch in HTML-Elementen mit {} verwendet werden
