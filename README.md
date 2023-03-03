@@ -30,3 +30,5 @@
 * mit "props" können Objekte an Komponenten dynamisch übergeben werden
 * Props werden an die einzubindende Komponente jeweils mit einem Attribut und dem Wert innerhalb einer {}-Klammer übergeben
 * Props werden in der einzubindenden Komponente als Parameter definiert (ein Parameter für alle Props zusammen)
+* Content zwischen dem öffnenden und schließenden Tag wird ebenso als Parameter übergeben (props.children)
+* Klassen einer eingebundenen Wrapper-Komponente werden mit *props.className* übergeben und müssen explizit im Root-Element der Komponente eingetragen werden
