@@ -35,3 +35,9 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 # User Interaktionen & State einer Anwendung
 * Mit React hat man Zugriff auf jedes Event eines **nativen** HTML-Elements (z.B. onClick)
 * Funktionen können über diese Event-Listener angesprochen werden
+
+## useState
+* Ändert sich der Content einer Komponente muss der Hook **useState** ausgeführt werden, damit diese angezeigt werden
+* useState bekommt eine Variable übergeben, die sich zur Laufzeit ändern kann/soll
+* Über Array-Destructuring bekommt man Zugriff auf den Wert des aktuellen Variablen-States sowie des dazugehörigen Setters
+* Das Ausführen des jeweiligen Setters führt dazu, dass die darunterliegende Komponente vollständig neu gerendert/ausgewertet wird
