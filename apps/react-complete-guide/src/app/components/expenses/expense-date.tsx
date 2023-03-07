@@ -1,6 +1,6 @@
 import './expense-date.scss';
 
-function ExpenseDate(props: any) {
+const ExpenseDate = (props: any) => {
   const month = props.date.toLocaleString('de-DE', {month: 'long'});
   const day = props.date.toLocaleString('de-DE', {day: '2-digit'});
   const year = props.date.getFullYear();
