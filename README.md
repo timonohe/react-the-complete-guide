@@ -41,3 +41,4 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 * useState bekommt eine Variable übergeben, die sich zur Laufzeit ändern kann/soll
 * Über Array-Destructuring bekommt man Zugriff auf den Wert des aktuellen Variablen-States sowie des dazugehörigen Setters
 * Das Ausführen des jeweiligen Setters führt dazu, dass die darunterliegende Komponente vollständig neu gerendert/ausgewertet wird
+* Jede Komponente besitzt seinen eigenen State
