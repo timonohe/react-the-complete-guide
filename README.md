@@ -62,3 +62,4 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 
 ## Auf User-Eingaben reagieren
 * Durch das onChange Event z.B. auf einem Input kann man eine Funktion angeben, an das Input den neuen Wert weiterleitet
+* Two-Way-Binding wird über das value-Attribut eines Input-Elements geregelt
