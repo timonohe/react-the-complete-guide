@@ -1,4 +1,5 @@
 import Expenses from './components/expenses/expenses';
+import NewExpense from './components/new-expense/new-expense';
 import './app.scss';
 
 const App = () => {
@@ -31,10 +32,10 @@ const App = () => {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
