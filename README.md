@@ -42,6 +42,7 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 * Über Array-Destructuring bekommt man Zugriff auf den Wert des aktuellen Variablen-States sowie des dazugehörigen Setters
 * Das Ausführen des jeweiligen Setters führt dazu, dass die darunterliegende Komponente vollständig neu gerendert/ausgewertet wird
 * Jede Komponente besitzt seinen eigenen State
+* **useState** kann mehrmals für verschiedene Attribute/Variablen aufgerufen werden
 
 ## Auf User-Eingaben reagieren
 * Durch das onChange Event z.B. auf einem Input kann man eine Funktion angeben, an das Input den neuen Wert weiterleitet
