@@ -45,7 +45,7 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 * Werden mehrere Werte in einer Komponente für einen State benötigt, kann ein Objekt in **useState** übergeben werden, um diese zusammengehörigen Werte zu gruppieren
 * Gruppiert man den State, muss beim Aktualisieren des States darauf geachtet werden, dass die anderen Attributs-Werte mit dem Spread-Operator übernommen werden
 
-```javascript
+```typescript
   const [userInput, setUserInput] = useState({
     enteredTitle: '',
     enteredAmount: '',
@@ -63,3 +63,24 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 ## Auf User-Eingaben reagieren
 * Durch das onChange Event z.B. auf einem Input kann man eine Funktion angeben, an das Input den neuen Wert weiterleitet
 * Two-Way-Binding wird über das value-Attribut eines Input-Elements geregelt
+
+## Kommunikation von Child-Component zu Parent-Component
+* Diese Art an Kommunikation wird per Eventhandling gesteuert
+* Der Eventhandler wird von der einbindenden Komponente als Prop an die Child-Component weitergegeben
+* Der Eventhandler wird dann an der entsprechenden Stelle in der Child-Component über die Props ausgeführt
+
+**Elternkomponente**
+```html
+<ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+```
+**Kindkomponente**
+```typescript
+const submitHandler = (event: any) => {
+  const expenseData: Expense = {
+    title: enteredTitle,
+    amount: enteredAmount,
+    date: new Date(enteredDate),
+  };
+  props.onSaveExpenseData(expenseData);
+};
+```

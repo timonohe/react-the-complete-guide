@@ -1,7 +1,12 @@
 import { ChangeEvent, useState } from 'react';
+import { Expense } from '../models/expense';
 import './expense-form.scss';
 
-const ExpenseForm = () => {
+type ExpenseFormProps = {
+  onSaveExpenseData: (expenseData: Expense) => void;
+};
+
+const ExpenseForm = (props: ExpenseFormProps) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
@@ -55,16 +60,16 @@ const ExpenseForm = () => {
 
   const submitHandler = (event: any) => {
     event.preventDefault();
-    const expenseData = {
+    const expenseData: Expense = {
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    props.onSaveExpenseData(expenseData);
   };
 
   return (
