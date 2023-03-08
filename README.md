@@ -45,5 +45,20 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 * Werden mehrere Werte in einer Komponente für einen State benötigt, kann ein Objekt in **useState** übergeben werden, um diese zusammengehörigen Werte zu gruppieren
 * Gruppiert man den State, muss beim Aktualisieren des States darauf geachtet werden, dass die anderen Attributs-Werte mit dem Spread-Operator übernommen werden
 
+```javascript
+  const [userInput, setUserInput] = useState({
+    enteredTitle: '',
+    enteredAmount: '',
+    enteredDate: ''
+  });
+  ...
+  setUserInput((prevState) => {
+    return {
+      ...prevState,
+      enteredTitle: event.target.value
+    };
+  });
+```
+
 ## Auf User-Eingaben reagieren
 * Durch das onChange Event z.B. auf einem Input kann man eine Funktion angeben, an das Input den neuen Wert weiterleitet
