@@ -88,9 +88,9 @@ const submitHandler = (event: any) => {
 # Darstellung von Listen
 * Arrays können mit der nativen **map**-Funktion zu einem TSX-Element transformiert werden
 ```typescript
-        {props.expenses.map((expense: Expense) => (
-          <ExpenseItem expense={expense} />
-        ))}
+{props.expenses.map((expense: Expense) => (
+  <ExpenseItem expense={expense} />
+))}
 ```
 
 # Bedinungabhängige Darstellung von Elementen 
