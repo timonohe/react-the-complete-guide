@@ -19,11 +19,14 @@ const Expenses = (props: ExpensesProps) => {
   return (
     <div>
       <Card className="expenses">
-        <ExpensesFilter selected={filteredYear} onFilterChange={filterChangeHandler} />
-        <ExpenseItem expense={props.expenses[0]} />
-        <ExpenseItem expense={props.expenses[1]} />
-        <ExpenseItem expense={props.expenses[2]} />
-        <ExpenseItem expense={props.expenses[3]} />
+        <ExpensesFilter
+          selected={filteredYear}
+          onFilterChange={filterChangeHandler}
+        />
+        {props.expenses.map((expense: Expense) => (
+          <ExpenseItem expense={expense} />
+        ))}
+        ;
       </Card>
     </div>
   );
