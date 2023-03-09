@@ -89,8 +89,9 @@ const submitHandler = (event: any) => {
 * Arrays können mit der nativen **map**-Funktion zu einem TSX-Element transformiert werden
 ```typescript
 {props.expenses.map((expense: Expense) => (
-  <ExpenseItem expense={expense} />
+  <ExpenseItem key={expense.id} expense={expense} />
 ))}
 ```
+* Damit React beim Aktualisieren der Liste (falls diese sich in einem State befindet) genau weiß, welche Elemente aktualisiert werden müssen, muss zu jeder Komponente ein **key**-Attribut hinterlegt werden. Dies sollte für gewöhnlich die eindeutige ID des jeweiligen Items sein
 
 # Bedinungabhängige Darstellung von Elementen 
