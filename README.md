@@ -95,3 +95,12 @@ const submitHandler = (event: any) => {
 * Damit React beim Aktualisieren der Liste (falls diese sich in einem State befindet) genau weiß, welche Elemente aktualisiert werden müssen, muss zu jeder Komponente ein **key**-Attribut hinterlegt werden. Dies sollte für gewöhnlich die eindeutige ID des jeweiligen Items sein
 
 # Bedinungabhängige Darstellung von Elementen 
+* Elemente können unter einer Bedingung innerhalb von **{}** ausgegeben werden
+* Entweder über eine Tenary Expression, dem logischen AND oder über eine Content-Variable
+```typescript
+{ expression ? <p>true</p> : <p>false</p> }
+{ expression && <p>true</p> }
+
+let content = <p>false</p>
+if (expression) content = <p>true</p>
+```
