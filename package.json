@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve react-complete-guide"
+    "start:expense-tracker": "nx serve react-complete-guide",
+    "start:goal-tracker": "nx serve goal-tracker"
   },
   "private": true,
   "devDependencies": {

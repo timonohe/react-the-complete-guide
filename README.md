@@ -104,3 +104,10 @@ const submitHandler = (event: any) => {
 let content = <p>false</p>
 if (expression) content = <p>true</p>
 ```
+
+# Styling von Komponenten
+## Conditional & Dynamic Styles
+
+## Styled Components
+
+## CSS Modules
