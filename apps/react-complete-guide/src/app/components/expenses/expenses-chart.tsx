@@ -24,7 +24,7 @@ const ExpensesChart = (props: ExpensesChartProps) => {
 
   props.expenses.forEach((expense: Expense) => {
     const expenseMonth = expense.date.getMonth();
-    chartDataPoints[expenseMonth].value += Number(expense.amount);
+    chartDataPoints[expenseMonth].value += expense.amount;
   });
 
   return <Chart dataPoints={chartDataPoints} />
