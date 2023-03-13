@@ -10,7 +10,7 @@ type ChartProps = {
 const Chart = (props: ChartProps) => {
   return (
     <div className="chart">
-      {props.dataPoints.map((dataPoint) => (
+      {props.dataPoints.map((dataPoint: DataPoint) => (
         <ChartBar
           key={dataPoint.label}
           value={dataPoint.value}
