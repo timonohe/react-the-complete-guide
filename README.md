@@ -107,6 +107,13 @@ if (expression) content = <p>true</p>
 
 # Styling von Komponenten
 ## Conditional & Dynamic Styles
+* Inline Styles sind grundsätzlich keine gute Idee, da diese auch vorhandene CSS-Regeln überschreiben
+* Bedingt abhängige Styles können z.B. über **useState** mit einem Boolean verwaltet werden und über eine Ternary-Expression verändert werden
+```typescript
+const [isValid, setIsValid] = useState(true);
+setIsValid(false);
+<label style={{ color: !isValid ? 'red' : 'black' }}>Course Goal</label>
+```
 
 ## Styled Components
 
