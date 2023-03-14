@@ -3,6 +3,7 @@ Hier wird zusammengefasst in Stichpunkten alle Konzepte von React.js aufgeführt
 
 # Nützliche Tools
 * React Devtools
+* Styled Components (Attach Styles only for specific Components)
 
 # React Basics
 ## Projekt-Struktur verinnerlichen
@@ -120,5 +121,7 @@ setIsValid(false);
 ```
 
 ## Styled Components
+* Der Styles-Scope kann sich nicht nur global sondern auch nur auf eine einzige Komponente beziehen
+* Mit der Bibliothek [styled-components](https://styled-components.com/) können Komponenten definiert werden, deren Styles nicht auf andere Komponenten übertragen werden können (z.B. über wiederkehrende Klassennamen)
 
 ## CSS Modules
