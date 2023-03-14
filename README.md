@@ -114,6 +114,10 @@ const [isValid, setIsValid] = useState(true);
 setIsValid(false);
 <label style={{ color: !isValid ? 'red' : 'black' }}>Course Goal</label>
 ```
+* Besser wäre es, dynamisch eine CSS-Klasse dynamisch anzuhängen
+```typescript
+ <div className={`form-control ${!isValid ? 'invalid' : ''}`}>
+```
 
 ## Styled Components
 
