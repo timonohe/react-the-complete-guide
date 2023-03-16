@@ -125,3 +125,10 @@ setIsValid(false);
 * Mit der Bibliothek [styled-components](https://styled-components.com/) können Komponenten definiert werden, deren Styles nicht auf andere Komponenten übertragen werden können (z.B. über wiederkehrende Klassennamen)
 
 ## CSS Modules
+* Naming der CSS-Modul-Klassen => **name.module.(s)css**
+* Import der Styles
+```typescript
+import styles from './button.module.scss';
+<button className={styles.button}>Click me</button>
+```
+* CSS Module bindet für jede Komponente, die dieses Modul einbindet, die CSS-Eigenschaften neu ein und benennt mit Hilfe eines Hashes die Styles für jede Komponente um, sodass die Stylings nur für die jeweilige Komponente gilt
