@@ -132,5 +132,3 @@ import styles from './button.module.scss';
 <button className={styles.button}>Click me</button>
 ```
 * CSS Module bindet für jede Komponente, die dieses Modul einbindet, die CSS-Eigenschaften neu ein und benennt mit Hilfe eines Hashes die Styles für jede Komponente um, sodass die Stylings nur für die jeweilige Komponente gilt
-
-# Debugging
