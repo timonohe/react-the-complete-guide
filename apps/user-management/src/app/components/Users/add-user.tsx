@@ -1,5 +1,5 @@
+import Button from "../UI/button";
 import Card from "../UI/card";
-
 import classes from './add-user.module.scss';
 
 const AddUser = (props: any) => {
@@ -16,7 +16,7 @@ const AddUser = (props: any) => {
         <label htmlFor="age">Age (Years)</label>
         <input id="age" type="number" />
 
-        <button type="submit">Add User</button>
+        <Button type="submit" onClick={() => {console.log('Clicked');}}>Add User</Button>
       </form>
     </Card>
   )
