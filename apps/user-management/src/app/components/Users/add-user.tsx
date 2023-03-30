@@ -1,22 +1,24 @@
-interface AddUserProps {
-  id: string;
-}
+import Card from "../UI/card";
 
-const AddUser = (props: AddUserProps) => {
+import classes from './add-user.module.scss';
+
+const AddUser = (props: any) => {
   const addUserHandler = (event: any) => {
     event.preventDefault();
   }
 
   return (
-    <form onSubmit={addUserHandler}>
-    <label htmlFor="username">Username</label>
-    <input id="username" type="text" />
+    <Card className={classes.input}>
+      <form onSubmit={addUserHandler}>
+        <label htmlFor="username">Username</label>
+        <input id="username" type="text" />
 
-    <label htmlFor="age">Age (Years)</label>
-    <input id="age" type="number" />
+        <label htmlFor="age">Age (Years)</label>
+        <input id="age" type="number" />
 
-    <button type="submit">Add User</button>
-  </form>
+        <button type="submit">Add User</button>
+      </form>
+    </Card>
   )
 }
 
