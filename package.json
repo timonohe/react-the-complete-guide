@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start:expense-tracker": "nx serve react-complete-guide",
-    "start:goal-tracker": "nx serve goal-tracker"
+    "start:goal-tracker": "nx serve goal-tracker",
+    "start:user-management": "nx serve user-management"
   },
   "private": true,
   "devDependencies": {
